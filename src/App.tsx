@@ -36,7 +36,7 @@ function App() {
   }
 
   async function getAccount() {
-    var accounts = await web3.eth.getAccounts()
+    var accounts = await web3.eth.requestAccounts()
     console.log(accounts)
     setAccount(accounts[0])
   }
