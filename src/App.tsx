@@ -43,10 +43,14 @@ function App() {
 
   function store() {
     getAccount()
-    contract.methods.store([12]).send({ from: account }, (err: string, result: string) => {
-      console.log(err)
-      console.log(result)
-    })
+    contract.methods.store([12]).send({
+      from: account,
+      to: address
+    },
+      (err: string, result: string) => {
+        console.log(err)
+        console.log(result)
+      })
   }
 
   return (
